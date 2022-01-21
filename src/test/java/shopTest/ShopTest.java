@@ -7,6 +7,7 @@ import instrument.string.Guitar;
 import instrument.woodwind.CorAnglais;
 import org.junit.Before;
 import org.junit.Test;
+import shop.Shop;
 
 import static org.junit.Assert.assertEquals;
 
