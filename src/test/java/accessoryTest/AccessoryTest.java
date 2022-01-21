@@ -1,5 +1,6 @@
 package accessoryTest;
 
+import accessory.Accessory;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -31,6 +32,6 @@ public class AccessoryTest {
 
     @Test
     public void canCalculateMarkup() {
-        assertEquals(3, accesorry.calculateMarkup(), 0.0);
+        assertEquals(3, accessory.calculateMarkup(), 0.0);
     }
 }
