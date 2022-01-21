@@ -1,6 +1,7 @@
 package instrumentTest.stringTest;
 
 import instrument.InstrumentType;
+import instrument.string.Guitar;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ public class GuitarTest {
 
     @Before
     public void before() {
-        guitar = new Guitar("Schecter", "C-7", "Mahogany", 674.50, 1349.00, 7);
+        guitar = new Guitar("Schecter", "C-7", "Mahogany", 674.50, 1349.00, (byte) 7);
     }
 
     @Test
