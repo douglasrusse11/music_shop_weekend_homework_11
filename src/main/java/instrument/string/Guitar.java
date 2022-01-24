@@ -5,7 +5,7 @@ public class Guitar extends StringInstrument {
         super(make, model, material, purchasePrice, salePrice, numberOfStrings);
     }
 
-    public String play() {
-        return "No Stairway, denied";
+    public void play() {
+        playSound("guitar");
     }
 }

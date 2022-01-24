@@ -5,7 +5,7 @@ public class Trumpet extends BrassInstrument {
         super(make, model, material, purchasePrice, salePrice, numberOfValves);
     }
 
-    public String play() {
-        return "American Football";
+    public void play() {
+        playSound("trumpet");
     }
 }

@@ -6,7 +6,7 @@ public class CorAnglais extends WoodwindInstrument {
         super(make, model, material, purchasePrice, salePrice, numberOfKeys);
     }
 
-    public String play() {
-        return "I don't even know";
+    public void play() {
+
     }
 }

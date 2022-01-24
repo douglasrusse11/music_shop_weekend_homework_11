@@ -3,6 +3,11 @@ package instrument;
 import behaviours.IPlay;
 import behaviours.ISell;
 
+import javax.sound.sampled.*;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+
 public abstract class Instrument implements IPlay, ISell {
     private String make;
     private String model;
@@ -48,5 +53,24 @@ public abstract class Instrument implements IPlay, ISell {
         return salePrice - purchasePrice;
     }
 
-    public abstract String play();
+    public abstract void play();
+
+    public void playSound(String instrument) {
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    File f = new File("./soundExamples/" + instrument + ".wav");
+                    AudioInputStream audioIn = AudioSystem.getAudioInputStream(f.toURI().toURL());
+                    Clip clip = AudioSystem.getClip();
+                    clip.open(audioIn);
+                    clip.start();
+                    while(clip.getMicrosecondLength() != clip.getMicrosecondPosition()) {
+                        Thread.yield();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
 }

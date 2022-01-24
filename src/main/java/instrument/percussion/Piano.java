@@ -5,7 +5,7 @@ public class Piano extends PercussionInstrument {
         super(make, model, material, purchasePrice, salePrice, numberOfPercussiveElements);
     }
 
-    public String play() {
-        return "Probably some Chopin";
+    public void play() {
+        playSound("piano");
     }
 }

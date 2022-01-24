@@ -52,11 +52,6 @@ public class CorAnglaisTest {
     }
 
     @Test
-    public void canPlay() {
-        assertEquals("I don't even know", corAnglais.play());
-    }
-
-    @Test
     public void canCalculateMarkup() {
         assertEquals(2169.25, corAnglais.calculateMarkup(), 0.0);
     }

@@ -51,12 +51,8 @@ public class TrumpetTest {
     }
 
     @Test
-    public void canPlay() {
-        assertEquals("American Football", trumpet.play());
-    }
-
-    @Test
     public void canCalculateMarkup() {
         assertEquals(67.00, trumpet.calculateMarkup(), 0.0);
     }
+
 }
